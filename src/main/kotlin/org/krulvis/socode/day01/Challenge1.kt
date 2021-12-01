@@ -1,4 +1,4 @@
-package org.krulvis.socode.day1
+package org.krulvis.socode.day01
 
 import java.io.FileReader
 
@@ -9,11 +9,9 @@ fun main() {
     ).readText().split("\n").filter { it.isNotEmpty() }.map { it.toInt() }
 
     var larger = 0
-    val windowed = input.windowed(3).map { it.sum() }
-    windowed.forEachIndexed { i, r ->
-        if (i > 0 && r > windowed[i - 1])
+    input.forEachIndexed { i, r ->
+        if (i > 0 && r > input[i - 1])
             larger++
     }
     println(larger)
-
 }
