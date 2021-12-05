@@ -36,7 +36,7 @@ fun List<Board>.secondChallenge(generated: List<Int>) {
                             line.all { number -> number in subGenerated }
                         }
                 }")
-                println("Score of first board to win is=${lastBoard.score(subGenerated)}")
+                println("Score of last board to win is=${lastBoard.score(subGenerated)}")
                 break
             }
         }
